@@ -1,0 +1,148 @@
+:root {
+    --bg-color: #0f1115;
+    --surface-color: #1a1d24;
+    --primary-color: #e50914;
+    --text-main: #ffffff;
+    --text-muted: #a0aab2;
+    --font-main: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.5;
+}
+
+.navbar {
+    background-color: var(--surface-color);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-content h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.header-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.search-box, .filter-box {
+    display: flex;
+    gap: 0.8rem;
+    flex: 1 1 auto;
+}
+
+input, select, button {
+    padding: 0.8rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input, select {
+    background-color: #262a33;
+    color: var(--text-main);
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+}
+
+input {
+    width: 100%;
+    min-width: 250px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #bf0810;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.placeholder-text {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    padding: 3rem 0;
+}
+
+.movie-card {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+}
+
+.poster {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    background-color: #262a33; 
+}
+
+.info {
+    padding: 1.2rem;
+}
+
+.info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
